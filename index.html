@@ -90,28 +90,70 @@
             <div class="pure-u-1 pure-u-lg-1-2 pure-u-xxl-2-5 git__col">
               <img src="/src/img/form/tea.jpg" class="git__img" alt="tea" />
             </div>
-            <div class="git__form pure-u-1 pure-u-lg-1-2 pure-u-xxl-1-2 git__col"><form action="#">
-              <fieldset class="git__fieldset">
-                <div class="git__input-block">
-                  <label class="git__label" for="name">Name</label>
-                <input class="git__input" type="text" id="name" name="name" placeholder="Name">
-                </div>
-                <div class="git__input-block">
-                  <label class="git__label" for="email">Email</label>
-                <input class="git__input" type="email" id="email" name="email" placeholder="Email">
-                </div>
-              </fieldset>
-              <label class="git__label" for="question">Your question</label>
-              <textarea class="git__textarea" name="question" id="question" placeholder="Question"></textarea>
-              <label class="git__label git__check-block" for="checkbox"><input type="checkbox" class="git__checkbox" id="checkbox">I agree with the <a href="">terms</a> </label>
-              <button class="btn-send git__btn">send request</button>
-            </form></div>
+            <div class="git__form pure-u-1 pure-u-lg-1-2 pure-u-xxl-1-2 git__col">
+              <form action="#">
+                <fieldset class="git__fieldset">
+                  <div class="git__input-block">
+                    <label class="git__label" for="name">Name</label>
+                    <input
+                      class="git__input"
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div class="git__input-block">
+                    <label class="git__label" for="email">Email</label>
+                    <input
+                      class="git__input"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                </fieldset>
+                <label class="git__label" for="question">Your question</label>
+                <textarea
+                  class="git__textarea"
+                  name="question"
+                  id="question"
+                  placeholder="Question"
+                ></textarea>
+                <label class="git__label git__check-block" for="checkbox"
+                  ><input type="checkbox" class="git__checkbox" id="checkbox" />I agree with the
+                  <a href="">terms</a>
+                </label>
+                <button class="btn-send git__btn">send request</button>
+              </form>
+            </div>
           </div>
         </div>
-
       </div>
-          <img class="git__vase" src="/src/img/form/vase.png" alt="vase">
-
+      <img class="git__vase" src="/src/img/form/vase.png" alt="vase" />
+    </section>
+    <section class="works">
+      <div class="container">
+        <h2 class="title-h2">check out our works</h2>
+        <div class="works__wrapper">
+          <!-- Slider main container -->
+          <div class="swiper works__slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="/src/img/works/tea-1.jpg" alt="tea-1" /></div>
+              <div class="swiper-slide"><img src="/src/img/works/tea-2.jpg" alt="tea-2" /></div>
+              <div class="swiper-slide"><img src="/src/img/works/tea-3.jpg" alt="tea-3" /></div>
+              <div class="swiper-slide"><img src="/src/img/works/tea-2.jpg" alt="tea-2" /></div>
+            </div>
+            <!-- If we need pagination -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <button class="icon-left-open works__slider-nav"></button>
+          <button class="icon-right-open works__slider-nav"></button>
+        </div>
+      </div>
     </section>
     <script type="module" src="/src/js/script.js"></script>
   </body>
