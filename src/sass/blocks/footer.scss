@@ -1,0 +1,103 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.footer {
+  background-color: $dark;
+
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    &__head {
+      margin-top: 50px;
+      color: $light;
+
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    &__text {
+      margin-top: 40px;
+      color: $light;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .email-form {
+      margin-top: 40px;
+      background-color: $dark;
+      color: $light;
+      outline: none;
+      width: 293px;
+      border: none;
+      border-bottom: 1px solid $ui-active;
+      padding-bottom: 15px;
+    }
+
+    .email-form::placeholder {
+      color: $ui-active;
+    }
+
+    .email-form:invalid:not(:placeholder-shown) {
+      border-bottom-color: $ui-error;
+      color: $ui-error;
+    }
+    .email-form:invalid::placeholder:not(:placeholder-shown) {
+      color: $ui-error;
+    }
+    &__checkblock {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 20px;
+      position: relative;
+      color: $light;
+      a {
+        color: #a22dc6;
+        text-decoration: none;
+        margin-left: 3px;
+      }
+    }
+    &__checkbox {
+      appearance: none;
+      margin-right: 15px;
+      width: 15px;
+      height: 15px;
+      background-color: $dark;
+      border: 1px solid $light;
+      color: $light;
+    }
+    &__checkbox:checked::after {
+      position: absolute;
+      content: "";
+      left: 5px;
+      top: 1px;
+      width: 6px;
+      height: 12px;
+      border-right: 2px solid $light;
+      border-bottom: 2px solid $light;
+      transform: rotate(45deg);
+    }
+    &__btn {
+      margin-top: 20px;
+    }
+  }
+  .info {
+    display: flex;
+    margin-top: 40px;
+    color: $light;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    &__discover {
+      display: flex;
+      flex-direction: column;
+    }
+    &__shopping {
+      display: flex;
+      flex-direction: column;
+    }
+    &__information {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

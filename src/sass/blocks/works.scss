@@ -1,14 +1,14 @@
 @use "/src/sass/base/variables.scss" as *;
 .works {
   padding-top: 60px;
+  padding-bottom :90px;
   &__slider {
     margin-top: 45px;
-    // padding-bottom: 45px;
   }
   .swiper-slide img {
     width: 100%;
   }
-  works__slider-nav {
+  .works__slider-nav {
     display: none;
   }
 
