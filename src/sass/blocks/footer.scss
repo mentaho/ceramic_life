@@ -2,6 +2,13 @@
 
 .footer {
   background-color: $dark;
+  color: $light;
+  h4{
+    color: $light;
+font-size: 16px;
+font-weight: 500;
+text-transform: uppercase;
+  }
 
   .newsletter {
     display: flex;
@@ -82,11 +89,8 @@
   }
   .info {
     display: flex;
-    color: $light;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    gap: 0 60px;
+   
+      gap: 0 60px;
     flex-wrap: wrap;
     &__item {
       margin: 40px 0 0 0;
@@ -104,4 +108,21 @@
       color: inherit;
     }
   }
+  .social{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 40px;
+  
+  &__logos{
+    .social__link{
+      color:$light;
+      text-decoration: none;
+      font-size: 24px;
+          }
+    display: inline;
+    gap: 10px;
+  }
+  }
+
 }
