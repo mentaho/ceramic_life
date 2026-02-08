@@ -132,7 +132,7 @@
     }
   }
   &__copyright {
-    margin: 40px auto ;
+    margin: 40px auto;
     padding-bottom: 50px;
     color: $light;
     font-size: 14px;
@@ -141,11 +141,23 @@
   }
 }
 
-@media screen and (min-width: 763px){
-  .footer{
-    .raw__container{
+@media screen and (min-width: 763px) {
+  .footer {
+    .raw__container {
       display: flex;
       justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    &__flexContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+    .raw__container {
+      display: contents;
     }
   }
 }
