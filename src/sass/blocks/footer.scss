@@ -10,11 +10,25 @@
     text-transform: uppercase;
   }
 
+  &__grid {
+    padding-top: 50px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "newsletter"
+      "info"
+      "social";
+  }
+  &__grid > * {
+    min-width: 0;
+  }
+
   .newsletter {
+    grid-area: newsletter;
     display: flex;
     flex-direction: column;
     &__head {
-      margin-top: 50px;
       color: $light;
 
       font-size: 16px;
@@ -88,12 +102,12 @@
     }
   }
   .info {
+    grid-area: info;
     display: flex;
 
     gap: 0 60px;
     flex-wrap: wrap;
     &__item {
-      margin: 40px 0 0 0;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -109,9 +123,9 @@
     }
   }
   .social {
+    grid-area: social;
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
     gap: 40px;
     &__link {
       display: inline-flex;
@@ -141,23 +155,28 @@
   }
 }
 
-@media screen and (min-width: 763px) {
-  .footer {
-    .raw__container {
-      display: flex;
-      justify-content: space-between;
-    }
+@media screen and (min-width: 768px) {
+  .footer__grid {
+    grid-template-columns: minmax(0, max-content) 1fr minmax(0, max-content);
+    grid-template-areas:
+      "newsletter   .   ."
+      "info         .    social";
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .footer {
-    &__flexContainer {
-      display: flex;
-      justify-content: space-between;
-    }
-    .raw__container {
-      display: contents;
-    }
+  .footer__grid {
+    grid-template-columns: minmax(0, max-content) 1fr minmax(0, max-content);
+    grid-template-areas: "newsletter info social";
+    align-items: start;
+  }
+  .info {
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .footer__grid {
+    padding-top: 80px;
   }
 }
