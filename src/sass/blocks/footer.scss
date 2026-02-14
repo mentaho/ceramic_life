@@ -1,6 +1,7 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .footer {
+  margin-top: 50px;
   background-color: $dark;
   color: $light;
   h4 {
@@ -176,7 +177,11 @@
 }
 
 @media screen and (min-width: 1920px) {
-  .footer__grid {
-    padding-top: 80px;
+  .footer {
+    margin-top: 75px;
+
+    .footer__grid {
+      padding-top: 80px;
+    }
   }
 }
