@@ -47,6 +47,20 @@
       border: 1px solid $ui-disabled;
     }
   }
+  .btn-read{
+    &:active {
+      outline: 1px solid $ceramic;
+      border: 1px solid $ceramic;
+    }
+    &:hover {
+      color: $ceramic;
+      border: 1px solid $ceramic;
+    }
+    &:disabled {
+      color: $ui-disabled;
+      border: 1px solid $ui-disabled;
+    }
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -65,5 +79,16 @@
   font-weight: 400;
   text-transform: uppercase;
   border-radius: 2px;
-border: 1px solid $light;
+  border: 1px solid $light;
+}
+
+.btn-read {
+  @include button;
+  width: 145px;
+  height: 32px;
+  font-size: 14px;
+  &:focus {
+    outline: 1px solid $ceramic;
+    border: 1px solid $ceramic;
+  }
 }

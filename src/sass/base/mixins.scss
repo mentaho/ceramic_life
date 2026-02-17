@@ -23,3 +23,23 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+@mixin angle-decoration ($top:-2px) {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: 0;
+    background-color: $dark;
+  }
+
+  &::after {
+    width: 200px;
+    height: 1px;
+  }
+  &::before {
+    width: 1px;
+    height: 200px;
+  }
+}
