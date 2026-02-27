@@ -3,6 +3,11 @@
 .git {
   position: relative;
   padding-top: 60px;
+  .just-validate-error-field:not([type="checkbox"]){
+      border: none;
+      outline: 1px solid $ui-error;
+  }
+
   &__wrapper {
     padding-top: 60px;
   }
@@ -91,7 +96,8 @@
     margin-right: 15px;
     width: 15px;
     height: 15px;
-  }
+    accent-color: $dark;
+   }
 
   &__btn {
     margin-top: 20px;

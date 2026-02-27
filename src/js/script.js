@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "purecss/build/grids-min.css";
 import "purecss/build/grids-responsive-min.css";
 import "/src/sass/style.scss";
+import JustValidate from "just-validate";
 
 const burger = document.querySelector(".burger"),
   close = document.querySelector(".header__menu-close"),
@@ -41,7 +42,7 @@ const swiper = new Swiper(".swiper", {
     },
     // when window width is >= 1920px
     1920: {
-      slidesPerView:3,
+      slidesPerView: 3,
       spaceBetween: 35,
     },
   },
@@ -68,4 +69,70 @@ try {
 
   // Показываем первый контент при загрузке
   contents.forEach((c, i) => (c.style.display = i === 0 ? "grid" : "none"));
+} catch (e) {}
+
+try {
+  const validator = new JustValidate("form");
+  validator
+    .addField("#name", [
+      {
+        rule: "required",
+      },
+      {
+        rule: "minLength",
+        value: 2,
+      },
+    ])
+    .addField("#email", [
+      {
+        rule: "required",
+      },
+      {
+        rule: "email",
+      },
+    ])
+    .addField(
+      "#question",
+      [
+        {
+          rule: "required",
+        },
+        {
+          rule: "minLength",
+          value: 5,
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#question")
+          .parentElement.querySelector(".error-message"),
+      },
+    )
+    .addField(
+      "#checkbox",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#checkbox")
+          .parentElement.parentElement.querySelector(".checkbox-error-message"),
+      },
+    );
+} catch (e) {}
+try {
+  const footerValidator = new JustValidate("#newsletter__form");
+  footerValidator
+    .addField("#user__email", [{ rule: "required" }, { rule: "email" }])
+    .addField(
+      "#newsletter__checkbox",
+      [{ rule: "required", errorMessage: "You should agree with the terms" }],
+      {
+        errorsContainer: document
+          .querySelector("#newsletter__checkbox")
+          .parentElement.parentElement.querySelector(".newsletter-checkbox-error-message"),
+      },
+    );
 } catch (e) {}
