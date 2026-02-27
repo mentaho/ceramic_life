@@ -120,7 +120,21 @@ try {
           .querySelector("#checkbox")
           .parentElement.parentElement.querySelector(".checkbox-error-message"),
       },
-    );
+    )
+    .onSuccess((event) => {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      fetch("https://httpbin.org/post", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Success", data);
+          form.reset();
+        });
+    });
 } catch (e) {}
 try {
   const footerValidator = new JustValidate("#newsletter__form");
@@ -134,5 +148,19 @@ try {
           .querySelector("#newsletter__checkbox")
           .parentElement.parentElement.querySelector(".newsletter-checkbox-error-message"),
       },
-    );
+    )
+    .onSuccess((event) => {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      fetch("https://httpbin.org/post", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Success", data);
+          form.reset();
+        });
+    });
 } catch (e) {}
