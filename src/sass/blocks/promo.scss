@@ -67,6 +67,9 @@
       width: 330px;
       height: 460px;
     }
+    &__cta {
+      animation: slideIn 3s;
+    }
   }
 }
 
@@ -83,14 +86,14 @@
       padding-left: 642px;
       padding-top: 384px;
     }
-  
-  &__potter {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: clamp(450px, 37.5vw, 640px);
-    height: 900px;
+
+    &__potter {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: clamp(450px, 37.5vw, 640px);
+      height: 900px;
+    }
   }
-}
 }
